@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleber Vieira | Portfólio Dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="particles-container"></div>
+    
+    <header>
+        <div class="nav-container">
+            <div class="logo">&lt;CleberDev/&gt;</div>
+            
+            <!-- Botão Hambúrguer para mobile -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Início</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#certificates">Certificados</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <button class="theme-btn" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Olá, eu sou <span class="highlight">Cleber Vieira</span></h1>
+                        <div class="typing-text" id="typingText"></div>
+                        <p>Desenvolvedor iniciante com 1 ano de estudos em Desenvolvimento Web. Habilidades em HTML, CSS, JavaScript, React e Node.js. Buscando primeira oportunidade para aplicar conhecimentos e aprender na prática.</p>
+                        <div class="btn-group">
+                            <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                            <a href="#contact" class="btn btn-secondary">Contato</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="assets/images/minha-foto.png" alt="Cleber Vieira">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2 class="section-title">Minhas Habilidades</h2>
+                <div class="skills-grid" id="skillsGrid"></div>
+            </div>
+        </section>
+
+        <!-- NOVA SEÇÃO: CERTIFICADOS -->
+        <section id="certificates">
+            <div class="container">
+                <h2 class="section-title">📜 Certificados e Cursos</h2>
+                <div class="certificates-grid" id="certificatesGrid"></div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title">Meus Projetos no GitHub</h2>
+                <div class="projects-filter" id="projectsFilter"></div>
+                <div class="projects-grid" id="projectsGrid"></div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="contact-content">
+                    <div class="contact-info" id="contactInfo"></div>
+                    <form class="contact-form" id="contactForm">
+                        <input type="text" placeholder="Seu Nome" required>
+                        <input type="email" placeholder="Seu Email" required>
+                        <textarea placeholder="Sua Mensagem" required></textarea>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cleber Vieira - Desenvolvedor Front-end & Back-end. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/data/projectsData.js"></script>
+    <script src="js/modules/particles.js"></script>
+    <script src="js/modules/theme.js"></script>
+    <script src="js/modules/navigation.js"></script>
+    <script src="js/modules/projects.js"></script>
+    <script src="js/modules/contacts.js"></script>
+    <script src="js/modules/animations.js"></script>
+    <script src="js/modules/certificates.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
