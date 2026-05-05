@@ -35,6 +35,7 @@ const ProjectsModule = (function() {
     function renderProjects() {
         const projectsGrid = document.getElementById('projectsGrid');
         if (!projectsGrid) return;
+        const canOpenLocalFiles = window.location.protocol === 'file:' || ['localhost', '127.0.0.1'].includes(window.location.hostname);
         
         let filteredProjects = projectsData.projects;
         if (currentFilter !== 'all') {
@@ -58,9 +59,21 @@ const ProjectsModule = (function() {
                         ${project.techs.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
                     </div>
                     <div class="project-links">
-                        <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-github"></i> Ver no GitHub
-                        </a>
+                        ${project.liveUrl ? `
+                            <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-arrow-up-right-from-square"></i> ${project.liveLabel || 'Ver site'}
+                            </a>
+                        ` : ''}
+                        ${project.localUrl && canOpenLocalFiles ? `
+                            <a href="${project.localUrl}" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-folder-open"></i> ${project.localLabel || 'Abrir local'}
+                            </a>
+                        ` : ''}
+                        ${project.githubUrl ? `
+                            <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        ` : ''}
                     </div>
                 </div>
             </div>
