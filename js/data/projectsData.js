@@ -17,34 +17,25 @@ const projectsData = {
     projects: [
         {
             id: 1,
-            title: "FinTrack - Controle de Financas Pessoais",
-            description: "Sistema desktop completo para gerenciamento de financas pessoais, desenvolvido com Java e JavaFX. Permite cadastrar receitas/despesas, visualizar saldo, gerar relatorios graficos e persistir dados com SQLite.",
-            techs: ["Java", "JavaFX", "SQLite", "POO", "JUnit"],
-            githubUrl: "https://github.com/clebervieira25/FinTrack",
+            title: "FinTrack - Sistema Full Stack de Financas",
+            description: "Sistema de gerenciamento de financas pessoais com API REST em Java e Spring Boot, autenticacao JWT com Spring Security, persistencia de dados com Spring Data JPA e interface desktop em JavaFX. Inclui cadastro de receitas e despesas, gerenciamento de transacoes e recuperacao de senha por e-mail.",
+            techs: ["Java", "Spring Boot", "Spring Security", "JWT", "JPA", "JavaFX", "Swagger"],
+            githubUrl: "https://github.com/clebervieira25/Fintrak-completo",
             category: "backend",
             icon: "fas fa-coins",
             iconColor: "#FFD700"
         },
         {
             id: 2,
-            title: "Carrinho Inteligente - Frontend",
-            description: "Aplicativo mobile desenvolvido com Flutter que permite ler codigos de barras de produtos, adicionar ao carrinho e visualizar valor total em tempo real.",
-            techs: ["Flutter", "Dart", "Provider", "Mobile Scanner", "HTTP"],
-            githubUrl: "https://github.com/clebervieira25/carrinho-inteligente-frontend",
-            category: "frontend",
+            title: "Carrinho Inteligente - Full Stack",
+            description: "Aplicacao Full Stack para consulta, cadastro e gerenciamento de produtos durante as compras. Desenvolvida com Flutter e Dart, integrada a uma API REST em Node.js e Express, utilizando PostgreSQL para armazenamento dos dados. Inclui busca de produtos por codigo de barras.",
+            techs: ["Flutter", "Dart", "Node.js", "Express", "PostgreSQL", "API REST"],
+            githubUrl: "https://github.com/clebervieira25/carrinho-inteligente-fullstack",
+            category: "fullstack",
             icon: "fas fa-shopping-cart",
             iconColor: "#FF6B35"
         },
-        {
-            id: 3,
-            title: "Carrinho Inteligente - Backend",
-            description: "API REST que serve como ponte entre o app Flutter e o banco de dados PostgreSQL. Gerencia operacoes de produtos do supermercado.",
-            techs: ["Node.js", "Express", "PostgreSQL", "REST API", "JWT"],
-            githubUrl: "https://github.com/clebervieira25/carrinho-inteligente-back-end",
-            category: "backend",
-            icon: "fas fa-server",
-            iconColor: "#00D4FF"
-        },
+
         {
             id: 4,
             title: "TJ iPhones",
@@ -187,7 +178,8 @@ const projectCategories = [
     { id: "all", name: "Todos" },
     { id: "landing", name: "Landing Pages" },
     { id: "frontend", name: "Frontend" },
-    { id: "backend", name: "Backend" }
+    { id: "backend", name: "Backend" },
+    { id: "fullstack", name: "Full Stack" }
 ];
 
 // Frases para animacao de digitacao
